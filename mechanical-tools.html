@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermal Efficiency Calculator</title>
+</head>
+<body>
+    <h1>Thermal Efficiency Calculator</h1>
+    <p>Calculate the thermal efficiency using the formula: Efficiency = (Output / Input) × 100</p>
+    <label for="output">Output Energy (J):</label>
+    <input type="number" id="output"><br>
+    <label for="input">Input Energy (J):</label>
+    <input type="number" id="input"><br>
+    <button onclick="calculateEfficiency()">Calculate Efficiency</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateEfficiency() {
+            const output = parseFloat(document.getElementById('output').value);
+            const input = parseFloat(document.getElementById('input').value);
+            if (!output || !input) {
+                document.getElementById('result').innerText = "Please enter valid values.";
+                return;
+            }
+            const efficiency = (output / input) * 100;
+            document.getElementById('result').innerText = Efficiency: ${efficiency.toFixed(2)}%;
+        }
+    </script>
+</body>
+</html>
