@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audiobook</title>
+</head>
+<body>
+    <h1>PDF to Audiobook Converter</h1>
+    <p>Select a PDF file to convert its text to audio:</p>
+    <input type="file" id="pdfInput" accept=".pdf">
+    <button onclick="convertPdfToAudio()">Convert to Audio</button>
+    <p id="status"></p>
+    <audio controls id="audioPlayer" style="display: none;"></audio>
+
+    <script>
+        async function convertPdfToAudio() {
+            const pdfInput = document.getElementById('pdfInput').files[0];
+            if (!pdfInput) {
+                document.getElementById('status').innerText = "Please select a PDF file.";
+                return;
+            }
+            document.getElementById('status').innerText = "Converting...";
+
+            // Here you would integrate a backend service like Google Text-to-Speech
+            // This is a placeholder for future integration.
+            document.getElementById('status').innerText = "Conversion feature coming soon!";
+        }
+    </script>
+</body>
+</html>
